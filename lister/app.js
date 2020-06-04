@@ -3,8 +3,8 @@ var items=document.getElementById("card");
 
 //Checking whether the buttons are working
 var BOOT=document.querySelector("#butt");
-BOOT.addEventListener("click",toClick);
-function toClick(e){
+BOOT.addEventListener("click",addItem);
+function addItem(e){
     e.preventDefault();
     console.log("Clicked");
     console.log(e.target.value);
@@ -13,8 +13,11 @@ function toClick(e){
     var tex=document.getElementById("control").value;
     var newContent=document.createTextNode(tex);
     newItem.appendChild(newContent); 
-    items.appendChild(newItem);
-    
-
-    
+    items.appendChild(newItem);    
+}
+var deleteBtn=document.getElementsByClassName("list-group-item");
+function removeItem(e){
+    e.preventDefault();
+    console.log(deleteBtn);
+  
 }
