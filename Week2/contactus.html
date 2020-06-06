@@ -81,9 +81,9 @@
             </div>
             <div class="col-12 col-sm-11 offset-sm-1">
                 <div class="btn-group" role="group">
-                    <a role="button" class="btn btn-primary " href="tel:+852 1234 5678"><i class="fa fa-phone fa-lg"> Call</i></a> 
-                    <a role="button" class="btn btn-info "><i class="fa fa-skype fs+a-lg"> Skype</i></a>
-                    <a role="button" class="btn btn-success "><i class="fa fa-envelope-o"> Email</i> </a>
+                    <a role="button" class="btn btn-primary" href="tel:+852 1234 5678"><i class="fa fa-phone fa-lg"> Call</i></a> 
+                    <a role="button" class="btn btn-info"><i class="fa fa-skype fs+a-lg"> Skype</i></a>
+                    <a role="button" class="btn btn-success"><i class="fa fa-envelope-o"> Email</i> </a>
                 </div>
             </div>
         </div>
@@ -93,16 +93,70 @@
               <h3>Send us your Feedback</h3>
            </div>
             <div class="col-12 col-md-9">
-                Form goes here
+                <form>
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2">First Name</label>
+                        <div class="col-12 col-md-10">
+                            <input type="text" placeholder="First Name" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="lastName" class="col-md-2">Last Name</label>
+                        <div class=" col-12 col-md-10">
+                            <input type="text" placeholder="Last Name" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="telnum" class="col-md-2">Telephone Number</label>
+                        <div class=" col-5 col-md-3">
+                            <input type="text" placeholder="Area Code" class="form-control">
+                        </div>
+                        <div class="col-7 col-md-7">
+                            <input type="text" placeholder="Phone" class="form-control">
+                        </div>
+                        
+                      </div>
+                      <div class="form-group row">
+                        <label for="email" class="col-12 col-md-2">Email</label>
+                        <div class="col-12 col-md-10">
+                            <input type="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 offset-md-2">
+                            <div class="form-check">
+                                <input type="checkbox" name="approve">
+                                <label for="form-check-label">
+                                    <strong>May we contact you?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 offset-md-2">
+                            <select class="form-control">
+                                <option>Tel.</option>
+                                <option>Email</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12 col-md-2">
+                            <label for="feedback">Your Feedback</label>
+                        </div>
+                        <div class=" col-md-10">
+                            <textarea rows="12" cols="25" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    
+                </form>
+            
             </div>
-             <div class="col-12 col-md">
-            </div>
+            
        </div>
 
     </div>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">             
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
