@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Ristorante Con Fusion: About Us</title>
 
 </head>
@@ -221,14 +221,13 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
-                        <div class="btn-group" id="carouselButton">
-                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                       
+                            <button class="btn btn-danger btn-sm" id="carouselButton">
                                 <span class="fa fa-pause"></span>
                             </button>
-                            <button class="btn btn-danger btn-sm" id="carousel-play">
-                                <span class="fa fa-play"></span>
-                            </button>
-                        </div>
+                           
+                        
+                        
                     </div>
                 </div> 
             </div>
@@ -292,15 +291,23 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script>
-$(document).ready(function(){
-    $('#mycarousel').carousel({interval:2000});
-    $('#carousel-pause').click(function(){
-        $('#mycarousel').carousel('pause');
+    $(document).ready(function(){
+        $('#mycarousel').carousel({interval:2000});
+        $("#carouselButton").click(function(){
+            if($("#carouselButton").children("span").hasClass("fa-pause")){
+                $("#mycarousel").carousel("pause");
+                $("#carouselButton").children("span").removeClass("pause");
+                $("#carouselButton").children("span").addClass("play");
+                
+            }
+            else if($("#carouselButton").children("span").hasClass("fa-play")){
+                $("#mycarousel").carousel("cycle");
+                $("#carouselButton").children("span").removeClass("play");
+                $("#carouselButton").children("span").addClass("pause");
+            }
+        });
+       
     });
-    $('#carousel-play').click(function(){
-        $('#mycarousel').carousel('cycle');
-});
-});
 </script>
 </body>
 
