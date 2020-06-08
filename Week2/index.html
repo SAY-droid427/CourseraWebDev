@@ -25,12 +25,12 @@
                         <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+                    <a id="login"><span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
     </nav>
-    <div id="loginModal1" class="modal fade" role="dialog">
+    <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-12 col-sm-3">
                     <br><br>
-                    <a role="button" class="btn btn-warning btn-block align-items-center justify-content-center" href="#book" data-toggle="modal" data-target="#loginModal1">Reserve table</a>
+                    <a role="button" id="reserveButton" class="btn btn-warning btn-block align-items-center justify-content-center" href="#book">Reserve table</a>
                 </div>
             </div>
         </div>
@@ -306,7 +306,12 @@
                 $("#carouselButton").children("span").addClass("pause");
             }
         });
-       
+       $("#reserveButton").click(function(){
+            $("#reserveModal").modal("show");    
+       });
+       $("#login").click(function(){
+           $("#loginModal").modal("show");
+       })
     });
 </script>
 </body>
