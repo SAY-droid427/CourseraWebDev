@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Menu from './components/MenuComponents';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,NavbarBrand} from 'reactstrap';
 import './App.css';
 import {DISHES} from "./shared/dishes";
