@@ -5,22 +5,41 @@ const connect=mongoose.connect("mongodb://localhost:27017/conFusion",{useNewUrlP
 
 connect.then((db)=>{
     console.log("Connected correctly to the server");
-   Dishes.create({
-       name:"Uthapizza",
-       description:"Test"
-   })
-    .then((dish)=>{
-        console.log(dish);
-        return Dishes.find({}).exec();
+    Dishes.create({
+        name: 'Uthappizza',
+        description: 'test'
     })
-    .then((dishes)=>{
-        console.log(dishes);
+    .then((dish) => {
+        console.log(dish);
+
+        return Dishes.findByIdAndUpdate(dish._id, {
+            $set: { description: 'Updated test'}
+        },{ 
+            new: true 
+        })
+        .exec();
+    })
+    .then((dish) => {
+        console.log(dish);
+
+        dish.comments.push({
+            rating: 5,
+            comment: 'I\'m getting a sinking feeling!',
+            author: 'Leonardo di Carpaccio'
+        });
+
+        return dish.save();
+    })
+    .then((dish) => {
+        console.log(dish);
+
         return Dishes.remove({});
     })
-    .then(()=>{
+    .then(() => {
         return mongoose.connection.close();
     })
-    .catch((err)=>{
+    .catch((err) => {
         console.log(err);
     });
+    
 })
