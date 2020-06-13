@@ -29,3 +29,18 @@ hr{
 #animate{
     padding:60px;
 }
+.row{
+    margin-bottom:100px;
+}
+
+.card-img-top{
+    height:500px;
+    
+}
+.card-title{
+    font-family: 'Pacifico', cursive;
+}
+.img-responsive{
+    height:400px;
+    width:100;
+}
